@@ -1,0 +1,14 @@
+{
+    "apiVersion": 2,
+    "name": "manager-block/images-effect",
+    "title": "Imagenes con Efectos",
+    "category": "vivero-manager-block",
+    "icon": "layout",
+    "keywords": ["banner", "custom", "acf"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template.php"
+    },
+    "style": [ "file:./style.css" ],
+    "editorStyle": "mb-images-effect-editor-style"
+}

@@ -1,0 +1,19 @@
+
+{
+  "apiVersion": 2,
+  "name": "manager-block/grid-main",
+  "title": "InfoGrid",
+  "description": "Este bloque solo se puede añadir una vez por pagina.",
+  "category": "vivero-manager-block",
+  "icon": "layout",
+  "keywords": ["list-block", "custom", "acf"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "template.php"
+  },
+  "style": [ "file:./style.css" ],
+  "editorStyle": "mb-grid-main-editor-style",
+  "supports": {
+    "multiple": false
+  }
+}

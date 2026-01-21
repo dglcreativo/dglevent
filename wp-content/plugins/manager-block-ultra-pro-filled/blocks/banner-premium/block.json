@@ -1,0 +1,15 @@
+
+{
+  "apiVersion": 2,
+  "name": "manager-block/banner-premium",
+  "title": "Información del proyecto",
+  "category": "vivero-manager-block",
+  "icon": "layout",
+  "keywords": ["banner", "custom", "acf"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "template.php"
+  },
+  "style": [ "file:./style.css" ],
+  "editorStyle": "mb-banner-premium-editor-style"
+}

@@ -1,0 +1,51 @@
+/* Frontend styles for box-images */
+.section-box-image{
+    display: block;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    padding: 80px 0;
+}
+
+.box-image-info{
+    font-family: var(--font-main), sans-serif;
+    padding: 40px;
+    display: grid;
+    width: 100%;
+    gap: 0.5em;
+    background-color: rgba(255,255,255,.7);
+    border-radius: 6px;
+}
+
+@media (min-width: 992px){
+    .section-box-image{
+        background-position-y: center;
+    }
+    .box-image-info{
+        width: 60%;
+        background-color: rgba(255,255,255,.9);
+    }
+}
+
+.box-image-info h1{
+    font-size: 3.5em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 0.8em;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    border-color: #000000;
+    padding: 0 0 5px 0;
+}
+.box-image-info h2{
+    font-family: var(--font-secondary), sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.1em;
+    margin-bottom: 30px;
+}
+
+.box-image-info p{
+    
+}

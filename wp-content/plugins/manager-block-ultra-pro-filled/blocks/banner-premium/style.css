@@ -1,0 +1,63 @@
+.section-banner-premium{
+    width: 100%;
+}
+.banner-premium{
+    display: block;
+}
+.figure-premium{
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+.info-banner-premium{
+    display: flex;
+    flex-direction: column;
+    padding: 7% 10% 5% 8%;
+    font-family: var(--font-main), sans-serif;
+}
+.section-banner-premium .title-premium{
+    font-size: 2.4em;
+    letter-spacing: -1px;
+    font-weight: 300;
+    line-height: 40px;
+}
+.banner-tag{
+    margin-bottom: 20px;
+}
+.tag-title, .banner-services h6{
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.7em;
+    letter-spacing: 0.2px;
+}
+.job-title{
+    font-family: var(--font-secondary), sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.1em;
+}
+.banner-premium-p{
+    margin-bottom: 20px;
+}
+.banner-premium-p p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.4em;
+}
+
+@media (min-width: 992px){
+    .banner-premium{
+        display: flex;
+    }
+    .figure-banner-premium{
+        width: 50%;
+    }
+    .info-banner-premium{
+        width: 50%;
+    }
+    .figure-premium{
+        height: 100%;
+    }
+}
+
+

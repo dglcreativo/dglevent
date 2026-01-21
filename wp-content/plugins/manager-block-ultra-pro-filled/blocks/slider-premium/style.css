@@ -1,0 +1,70 @@
+/* Frontend styles for slider-premium */
+.section-slider-premium{
+    width: 100%;
+}
+.slider-premium{
+    display: block;
+}
+.figure-slider-premium{
+    position: relative;
+    overflow: hidden;
+    height: 450px;
+}
+.figure-s-premium{
+    width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.figure-s-premium.active{
+    opacity: 1;
+    z-index: 1;
+}
+.info-slider-premium{
+    display: flex;
+    flex-direction: column;
+    padding: 7% 10% 5% 8%;
+    font-family: var(--font-main), sans-serif;
+}
+.title-premium{
+    font-size: 5em;
+    letter-spacing: -8px;
+}
+.banner-tag{
+    margin-bottom: 20px;
+}
+.tag-title, .banner-services h6{
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.7em;
+    letter-spacing: 0.2px;
+}
+.job-title{
+    font-family: var(--font-secondary), sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.1em;
+    margin-bottom: 20px;
+}
+
+
+@media (min-width: 992px){
+    .slider-premium{
+        display: flex;
+    }
+    .figure-slider-premium{
+        width: 50%;
+        height: 600px;
+    }
+    .info-slider-premium{
+        width: 50%;
+    }
+    .figure-s-premium{
+        height: 100%;
+    }
+}
+
+

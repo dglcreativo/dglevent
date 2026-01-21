@@ -1,0 +1,23 @@
+/* Frontend styles for title-subtitle */
+.section-title-subtitle{
+    padding: 50px 0 50px 0;
+}
+
+.section-title-subtitle .ts__title{
+    font-size: 3.2em;
+    font-family: var(--font-main), sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.section-title-subtitle .ts__d{
+    font-size: 1.4em;
+    font-family: var(--font-secondary), sans-serif;
+    font-weight: 600;
+    line-height: 1em
+}
+@media(min-width:769px){
+    .section-title-subtitle .ts__d{
+        line-height: 1px
+    }   
+}

@@ -1,0 +1,15 @@
+
+{
+  "apiVersion": 2,
+  "name": "manager-block/box-color",
+  "title": "Cajas de Información",
+  "category": "vivero-manager-block",
+  "icon": "layout",
+  "keywords": ["box-color", "custom", "acf"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "template.php"
+  },
+  "style": [ "file:./style.css" ],
+  "editorStyle": "mb-box-color-editor-style"
+}

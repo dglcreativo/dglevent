@@ -1,0 +1,77 @@
+.section-accordion{
+    padding: 10px 0 10px 0;
+}
+.accordion{
+    margin-bottom: 35px;
+}
+.new-accordion{
+    display: block;
+}
+.figure-premium{
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+.box-accordion-title{
+    padding: 0% 0% 10%;
+}
+.section-accordion .accordion-title{
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+    line-height: 40px;
+}
+.info-accordion{
+    display: flex;
+    flex-direction: column;
+    padding: 5% 1% 0% 8%;
+    font-family: var(--font-main), sans-serif;
+}
+
+/* Pestañas del acordeon */
+.card-header button.btn-link::after {
+    content: '+';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    font-size: 2rem;
+    transition: transform 0.3s ease-in-out;
+}
+.card-header button.btn-link:not(.collapsed)::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+.card-header button.btn-link.collapsed::after {
+    transform: translateY(-50%) rotate(0deg);
+}
+.card-header button.btn-link {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    padding-right: 40px;
+    color: #222030;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: var(--font-secondary), sans-serif;
+}
+.card-header button.btn-link:hover, .card-header button.btn-link:focus{
+    text-decoration: none;
+    box-shadow: none;
+}
+
+@media (min-width: 992px){
+    .new-accordion{
+        display: flex;
+    }
+    .figure-accordion{
+        width: 50%;
+    }
+    .info-accordion{
+        width: 50%;
+    }
+    .figure-premium{
+        height: 100%;
+    }
+}
+
+

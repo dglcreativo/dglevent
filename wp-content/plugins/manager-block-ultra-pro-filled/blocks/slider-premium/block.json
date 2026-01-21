@@ -1,0 +1,16 @@
+
+{
+  "apiVersion": 2,
+  "name": "manager-block/slider-premium",
+  "title": "Carousel",
+  "category": "vivero-manager-block",
+  "icon": "layout",
+  "keywords": ["slider-premium", "custom", "carousel"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "template.php"
+  },
+  "script": ["file:./slider-premium.js"],
+  "style": [ "file:./style.css" ],
+  "editorStyle": "mb-slider-premium-editor-style"
+}

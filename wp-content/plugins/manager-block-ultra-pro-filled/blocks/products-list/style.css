@@ -1,0 +1,153 @@
+.section-product{
+    padding: 10px 0 10px 0;
+}
+.product-list{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 35px;
+}
+.new-product{
+    display: block;
+}
+.figure-premium{
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+.box-product-title{
+    padding: 0% 0% 2%;
+}
+.section-product .product-title{
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+    line-height: 40px;
+}
+.info-product{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-main), sans-serif;
+}
+
+@media (min-width: 992px){
+    .new-product{
+        display: flex;
+    }
+    .figure-product{
+        width: 50%;
+    }
+    .info-product{
+        width: 100%;
+    }
+    .figure-premium{
+        height: 100%;
+    }
+}
+
+/* =======================================
+   ESTILOS GENERALES DEL CONTENEDOR FLEX
+   ======================================= */
+.new-product {
+    /* Define el contenedor como Flexbox para la rejilla */
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+    gap: 30px; /* Espacio entre las tarjetas de producto */
+    justify-content: center; /* Centra los productos si no llenan la línea */
+    margin-top: 20px;
+}
+
+/* =======================================
+   ESTILOS DE LA TARJETA INDIVIDUAL
+   ======================================= */
+.product-item {
+    /* Base para la tarjeta */
+    flex-basis: calc(33.33% - 20px); /* 3 columnas en escritorio, ajustado por el gap */
+    max-width: 300px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* =======================================
+   IMAGEN Y TEXTO
+   ======================================= */
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.product-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.product-link:hover {
+    color: #0073aa; /* Color de enlace típico de WordPress */
+}
+
+.product-price {
+    font-size: 1.1em;
+    color: #e66465; /* Color para destacar el precio */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* =======================================
+   BOTÓN AÑADIR AL CARRITO (WooCommerce)
+   ======================================= */
+.product-item a.button,
+.product-item .product-add-to-cart a.add_to_cart_button, a.add_to_cart_button {
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    color: #fff;
+    position: relative;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 0.5rem 2rem 0.5rem 2rem !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: none;
+    border: 1px solid;
+}
+.product-item .product-add-to-cart a.add_to_cart_button:hover{
+    background-color: transparent !important;
+    border: 1px solid;
+}
+
+/* =======================================
+   RESPONSIVE DESIGN (Ajustes para móviles)
+   ======================================= */
+@media (max-width: 768px) {
+    .new-product {
+        gap: 20px;
+    }
+    .product-item {
+        /* 2 columnas en tablets */
+        flex-basis: calc(50% - 10px);
+        max-width: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-item {
+        /* 1 columna en móviles */
+        flex-basis: 100%;
+        max-width: none;
+    }
+}
+
+

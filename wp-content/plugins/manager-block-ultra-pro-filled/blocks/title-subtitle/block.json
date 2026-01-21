@@ -1,0 +1,15 @@
+
+{
+  "apiVersion": 2,
+  "name": "manager-block/title-subtitle",
+  "title": "Titulo y Subtitulo",
+  "category": "vivero-manager-block",
+  "icon": "layout",
+  "keywords": ["title-subtitle", "custom", "acf"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "template.php"
+  },
+  "style": [ "file:./style.css" ],
+  "editorStyle": "mb-title-subtitle-editor-style"
+}

@@ -1,0 +1,66 @@
+.section-img-carousel{
+    position: relative;
+    width: 100%;
+}
+@media(min-width: 992px){
+    .images-carousel{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: stretch;
+        transition: height .5s;
+    }
+}
+.carousel-h-title{
+    font-size: 3rem;
+    font-family: var(--font-main), sans-serif;
+    font-weight: 300;
+    line-height: 45px;
+    margin-bottom: 75px;
+}
+.images-carousel article{
+    align-self: flex-start;
+    margin: 0;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition-property: transform, opacity;
+    transition-timing-function: ease-in-out;
+}
+
+.item-carousel .carousel-thumbnail img {
+    display: block;
+    min-width: 338px;
+    min-height: 338px;
+}
+.item-carousel .carousel-overlay {
+    background-color: rgba(54,56,58,.4);
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    min-height: 338px;
+    transition: opacity 1s;
+}
+.carousel-title {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+.item-carousel:hover .carousel-overlay {    
+    opacity: 0.9;
+    transition: opacity .5s;
+}
+

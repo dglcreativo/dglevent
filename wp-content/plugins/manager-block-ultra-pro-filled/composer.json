@@ -1,0 +1,11 @@
+{
+  "name": "tudominio/manager-block-ultra-pro",
+  "description": "Plugin premium de bloques Gutenberg con ACF",
+  "autoload": {
+    "psr-4": {
+      "ManagerBlock\\": "includes/"
+    }
+  },
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0+"
+}

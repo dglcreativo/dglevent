@@ -1,0 +1,16 @@
+
+{
+    "apiVersion": 2,
+    "name": "manager-block/carousel-horizontal",
+    "title": "Galeria Horizontal",
+    "category": "vivero-manager-block",
+    "icon": "layout",
+    "keywords": ["banner", "custom", "acf"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template.php"
+    },
+    "style": [ "file:./style.css" ],
+    "editorStyle": "mb-carousel-horizontal-editor-style"
+}
+

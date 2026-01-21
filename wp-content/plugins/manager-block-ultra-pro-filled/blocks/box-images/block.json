@@ -1,0 +1,15 @@
+
+{
+  "apiVersion": 2,
+  "name": "manager-block/box-images",
+  "title": "Imagen + Información",
+  "category": "vivero-manager-block",
+  "icon": "layout",
+  "keywords": ["box-images", "custom", "acf"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "template.php"
+  },
+  "style": [ "file:./style.css" ],
+  "editorStyle": "mb-box-images-editor-style"
+}

@@ -1,0 +1,203 @@
+.btn{
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    color: #fff;
+    position: relative;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 0.5rem 2rem 0.5rem 2rem !important;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+/*Primary*/
+.btn-primary:hover{
+    background-color: transparent !important;
+}
+/*Boton Azul*/
+.btn.btn-blue {
+    color: #000;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 5px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.btn.btn-blue:hover {
+    background: #c7f8f9;
+    color: #6ab1c9;
+    border: 3px solid #6ab1c9;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.btn.btn-blue:active {
+    -webkit-transform: translate(5px, 5px);
+    transform: translate(5px, 5px);
+}
+
+/*Boton Verde*/
+.btn.btn-green {
+    color: #FFFFFF;
+    background: #78c98d;
+    border: none;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+.btn.btn-green:hover {
+    background: transparent;
+    color: #78c98d;
+}
+.btn.btn-green:hover:before,
+.btn.btn-green:hover:after {
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    width: 100%;
+}
+.btn.btn-green:before,
+.btn.btn-green:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 0px;
+    height: 3px;
+    background: #78c98d;
+    transition: all 0.4s ease;
+}
+.btn.btn-green:after {
+    top: inherit;
+    left: inherit;
+    bottom: 0;
+    right: 0;
+}
+
+/*Botón amarillo*/
+.btn.btn-yellow {
+    color: #ffffff;
+    background: #e5d844;
+    border: none;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.btn.btn-yellow:hover {
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    background: transparent;
+    color: #e5d844;
+}
+.btn.btn-yellow:hover:after {
+    transition: all 0.3s ease;
+    width: 100%;
+    left: 0;
+}
+.btn.btn-yellow:after {
+    position: absolute;
+    transition: all 0.3s ease;
+    content: '';
+    width: 0;
+    bottom: 0;
+    left: inherit;
+    right: 0;
+    height: 3px;
+    background: #e5d844;
+}
+
+/*Boton Rojo*/
+.btn.btn-red {
+    color: #000000;
+    border-radius: 5px;
+    background: radial-gradient(circle, #ed412a 0.25em, transparent 0.25em) center/1.2em 1.2em;
+    border: 3px solid #ed412a;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.btn.btn-red:hover {
+    color: #fff;
+    background: radial-gradient(circle, #ed412a 0.25em, transparent 0.25em) center/0.1em 0.1em;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+/*Boton Gris*/
+.btn.btn-grey {
+    color: #c4c0c0;
+    background: #ffffff;
+    border: 3px solid #c4c0c0;
+    border-radius: 5px;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+.btn.btn-grey:hover {
+    border-color: #50514f;
+    color: #50514f;
+    background-image: linear-gradient(#c4c0c0, #c4c0c0 3px);
+    background-size: 12px 16px;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+/*Boton con icono*/
+.btn-cta {
+    position: relative;
+    margin-top: 20px;
+    color: #000000;
+    padding: 17px 22px;
+    transition: all 0.2s ease;
+}
+.btn-cta:hover{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.btn-cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: rgb(123, 138, 169, 0.5);
+    width: 56px;
+    height: 56px;
+    transition: all 0.3s ease;
+}
+.btn-cta span {
+    position: relative;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.btn-cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+.btn-cta:hover:before {
+    width: 100%;
+    background: var(--color-hover);
+}
+.btn-cta:hover svg path, .btn-cta:hover svg polyline{
+    stroke: #fff;
+}
+.btn-cta:hover svg {
+    transform: translateX(5px);
+}
+.btn-cta:active {
+    transform: scale(0.96);
+}
+.btn-cta:hover .content-box__icon{
+    filter: brightness(0) invert(1);
+}

@@ -1,0 +1,63 @@
+/* Frontend styles for section-boxed */
+.section-section-boxed{
+    padding: 30px 0 0 0;
+}
+@media (min-width: 992px){
+    .section-section-boxed {
+        font-family: var(--font-main), sans-serif;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
+    }
+    .invert{
+        text-align: right;
+        flex-direction: row;
+        grid-template-areas:
+            "item3 item2 item1";
+    }
+    .invert .boxed-info{
+        grid-area: item1;
+    }
+    .invert .box-figure-one{
+        grid-area: item2;
+    }
+    .invert .box-figure-two{
+        grid-area: item3;
+    }
+}
+
+
+.boxed-info{
+    font-family: var(--font-main), sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-bottom: 30px;
+}
+.boxed-color-category h6{
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.7em;
+    letter-spacing: 0.2px;
+}
+.boxed-color-title h3{
+    font-size: 2.4em;
+    font-weight: 400;
+    line-height: 1.2em;
+}
+
+.section-section-boxed figure{
+    max-width: 100%;
+    max-height: 380px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.section-section-boxed figure img{
+    position: relative;
+    object-fit: cover;
+    object-position: center;
+    height: 100vh;
+}
+
+

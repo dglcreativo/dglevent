@@ -1,0 +1,34 @@
+.section-comments-slider{
+    padding: 10px 0 10px 0;
+}
+.carousel{
+    height: 175px;
+}
+.section-comments-slider img{
+    width: 150px;
+    margin-bottom: 35px;
+}
+
+.cc-profession{
+    font-family: var(--font-main), sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.cc-author{
+    font-size: 1.4rem;
+    font-family: var(--font-secondary), sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.cc-comment{
+    font-size: 1rem;
+    font-family: var(--font-secondary), sans-serif;
+    font-weight: 200;
+    line-height: 1.3;
+    margin-bottom: 35px;
+    padding: 0;
+}

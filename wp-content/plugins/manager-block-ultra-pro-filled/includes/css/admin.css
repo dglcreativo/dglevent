@@ -1,0 +1,218 @@
+#new-to-header .display_header {
+  padding: 30px;
+  background-color: #fff; }
+  #new-to-header .display_header .logo {
+    max-width: 160px;
+    display: block; }
+    #new-to-header .display_header .logo img {
+      max-width: 100%; }
+  #new-to-header .display_header h2 {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 6px; }
+
+/* hide annoying revslider upsell notification */
+.wp-list-table.plugins #revslider-update {
+  display: none;
+}
+
+/* redux */
+.redux-container #redux-intro-text {
+    background: #ffffff;
+    padding: 10px 20px;
+}
+
+.redux-main .button {
+    margin-right: 6px;
+}
+
+tr.fold th:first-child {
+    border-left: 2px solid #007cba !important;
+}
+
+.redux-container .redux-group-tab {
+    margin-bottom: 20px;
+}
+
+.redux-container .redux-main {
+    border-left: none;
+    background-color: #f1f1f1;
+}
+
+.redux-container .redux-main h2 {
+    margin-bottom: 20px;
+}
+
+.redux-container #info_bar, .redux-container #redux-footer {
+    background: #f1f1f1 !important;
+    padding: 12px 14px 12px 14px;
+}
+
+.redux-container .redux-main .form-table tr {
+    background: #ffffff;
+}
+
+.redux-container .redux-main .form-table tr th, .redux-container .redux-main .form-table tr td {
+    padding: 0 20px;
+    border-right: 1px solid #e7e7e7;
+}
+
+.redux-container .redux-main .form-table th {
+    background: #f8f8f8;
+    border-left: 2px solid #e7e7e7;
+}
+
+.redux-notice-field {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0 0 0;
+    border: 1px solid #E7E7E7;
+    border-left: 2px solid #E7E7E7;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.redux-notice-field p {
+    margin: 0;
+    padding: 0;
+}
+
+.redux-notice-field b {
+    color: #007cba;
+    color: #85ac1a;
+    font-size: 15px;
+}
+
+.redux-container .redux-sidebar .redux-group-menu li a:hover {
+    background-color: #85ac1a !important;
+}
+
+.redux-container .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
+    background-color: #85ac1a !important;
+    color: #fff !important;
+}
+
+.redux-container .redux-sidebar .redux-group-menu li.active a {
+    background-color: #85ac1a !important;
+    color: #fff !important;
+    opacity: 1 !important;
+    font-weight: 700 !important;
+}
+
+.redux-container .redux-sidebar .redux-group-menu li .subsection .redux-group-tab-link-li .redux-group-tab-link-a:hover {
+    color: #7bd29b !important;
+}
+
+#recycle-pattern li.redux-image-select {
+    max-width: 64px;
+    margin: 10px !important;
+    height: auto;
+}
+
+.redux-field.wbc_importer {
+    background: #eeeeee;
+}
+
+#recycle-pattern li.redux-image-select {
+    max-width: 80px;
+    margin: 10px !important;
+    height: auto;
+}
+
+.redux-notice-field p {
+    margin: 0;
+    padding: 0;
+}
+
+/* end of redux */
+
+/* demo importer fix */
+.wbc_importer .theme-browser .wrap-importer .theme-actions {
+    top: auto;
+    bottom: 0;
+    transform: none;
+}
+
+/* theme options */
+.right-column {
+    text-align: right;
+}
+.right-column a {
+    display: block;
+    text-decoration: none;
+}
+
+/* theme options header */
+#new-to-header .display_header .right-column .wrapper {
+    display: inline-block;
+}
+
+#new-to-header .text-right {
+    float: right;
+}
+
+/* admin bar icon */
+.ab-icon.new-icon {
+    height: 20px;
+    width: 20px;
+    background-image: url("../img/logo-redux.png") !important;
+    background-size: 100%;
+}
+
+.block-editor .new-widget-placeholder > .components-placeholder__label {
+    /*background: url("../img/new-logo-d.png") no-repeat left;*/
+    background-size: 20px;
+    padding-left: 25px;
+}
+
+#wp-toolbar > #wp-admin-bar-root-default #wp-admin-bar-new-theme-options .ab-icon.new-icon {
+    height: 20px !important;
+    width: 20px !important;
+    position: relative !important;
+    background-image: url("../img/logo-redux.png") !important;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 75%;
+}
+
+.redux-group-menu .el-gift {
+    color: #0085ba;
+    opacity: 1;
+    font-size: 20px;
+}
+
+/*Redux 4 updates */
+.redux-container #redux-header-new .display_header {
+    width: calc(100% - 40px);
+    margin: 20px 20px 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+#info-info_demo_importer_settings + table #newtheme-wbc_demo_importer {
+    display: none;
+}
+
+#info-info_demo_importer_settings + table td {
+    padding: 0 !important;
+}
+
+.redux-field.wbc_importer {
+    padding-top: 20px;
+}
+
+#redux-header-new .logo img {
+    max-width: 240px;
+}
+
+#newtheme-pattern li.redux-image-select {
+    max-width: 64px;
+    margin: 10px !important;
+    height: auto;
+}
