@@ -12,7 +12,7 @@ get_header();
 
 ?>
 
-<div class="site-content" id="content">
+<div class="site-content section-page" id="content">
     <div class="container">
         <main id="main" class="site-main section-blog row">
             <div id="primary" class="col-md-<?php echo esc_attr($blog_column) ?>">

@@ -16,7 +16,7 @@ if (is_home() && is_front_page() == false) {
 $blog_column = is_active_sidebar( 'sidebar-default' ) ? '8' : '12';
 ?>
 
-<div class="site-content" id="content">
+<div class="site-conten section-page" id="content">
     <div class="container">
         <main id="main" class="site-main section-blog row">
 

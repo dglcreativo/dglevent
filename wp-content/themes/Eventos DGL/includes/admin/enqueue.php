@@ -5,13 +5,11 @@ function vivero_scripts_styles(){
     $new_options_custom_css = "";
     //Fuentes de google fonts
     wp_enqueue_style('googleFonts-a', 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap', array(), '1.0.0');
-    wp_enqueue_style('googleFonts-b', 'https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap', array(), '1.0.0');
-    wp_enqueue_style('googleFonts-c', 'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap', array(), '1.0.0');
+    wp_enqueue_style('googleFonts-b', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap', array(), '1.0.0');
     //Bootstrap
     wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css');
     wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js', 'jquery', '', true);
     wp_enqueue_style('font-awesome','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
-
 
 
 

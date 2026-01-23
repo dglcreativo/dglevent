@@ -89,9 +89,9 @@ Redux::setSection( $opt_name, array(
             'subtitle'      => esc_html__('Define el color que va a destacar en tu tema', 'new'),
             'transparent'   => false,
             'output'        => array(
-                'background-color'  => '.product-item .product-add-to-cart a.add_to_cart_button, .wc-block-components-button, .btn-primary, .page-heading, .page-heading-small, .page-numbers li .current, .page-numbers li>a:hover,  a.tag-cloud-link:hover, aside .widget .widget-title:before, .site-footer .widget .widget-title:before, .prefooter .widget .widget-title:before, .item-carousel .carousel-overlay, .barra-lateral .boton, .widget_media_gallery .gallery a:hover, .box-color-item:hover, .prev-post a:hover, .next-post a:hover',
-                'color'             => '.product-item .product-add-to-cart a.add_to_cart_button:hover, .wc-block-components-button:hover, .btn-primary:hover, a:hover, a:active, .new-classic .entry-meta>a:hover>.category, a:not([class*="hover"]) .item-title:hover, a.item-title:hover, .wpcf7-form .select:after, .wpcf7-form .name:after, .wpcf7-form .email:after, .wpcf7-form .date:after, .wpcf7-form .phone:after, .wpcf7-form .time:after, input.search-submit[type="submit"]:hover, .widget_archive > ul > li a:before, .widget_categories > ul > li a:before, .widget_pages > ul > li a:before, .widget_meta > ul > li a:before, .current-menu-item a, .menu-item a:hover, .sticky-header .current-menu-item a',
-                'border-color'      => '.product-item .product-add-to-cart a.add_to_cart_button, .wc-block-components-button, .btn-primary, .product-item .product-add-to-cart a.add_to_cart_button:hover, .wc-block-components-button:hover, .btn-primary:hover, .paging-navigation .page-numbers .current, input:focus, textarea:focus, .wpcf7-form input:focus, .wpcf7-form input:focus, .form-control:focus',
+                'background-color'  => '.section-blog .new-blog-classic .entry-meta, .btn-primary, .page-heading, .page-heading-small, .page-numbers li .current, .page-numbers li>a:hover,  a.tag-cloud-link:hover, aside .widget .widget-title:before, .site-footer .widget .widget-title:before, .prefooter .widget .widget-title:before, .item-carousel .carousel-overlay, .barra-lateral .boton, .widget_media_gallery .gallery a:hover, .box-color-item:hover, .prev-post a:hover, .next-post a:hover',
+                'color'             => '.btn-primary:hover, a:hover, a:active, .new-classic .entry-meta>a:hover>.category, a:not([class*="hover"]) .item-title:hover, a.item-title:hover, .wpcf7-form .select:after, .wpcf7-form .name:after, .wpcf7-form .email:after, .wpcf7-form .date:after, .wpcf7-form .phone:after, .wpcf7-form .time:after, input.search-submit[type="submit"]:hover, .widget_archive > ul > li a:before, .widget_categories > ul > li a:before, .widget_pages > ul > li a:before, .widget_meta > ul > li a:before, .current-menu-item a, .menu-item a:hover, .sticky-header .current-menu-item a',
+                'border-color'      => '.btn-primary, .btn-primary:hover, .paging-navigation .page-numbers .current, input:focus, textarea:focus, .wpcf7-form input:focus, .wpcf7-form input:focus, .form-control:focus',
                 'border-bottom'     =>'aside .widget .widget-title:before',
             ),
             'default'       => '#7b8aa9'
@@ -285,7 +285,10 @@ Redux::setSection( $opt_name, array(
             'subtitle' => esc_html__('Elige el tipo de navegación que deseas para tu header classic', 'new'),
             'options'  => array(
                 '1' => 'Normal',
-                '2' => 'Fill'
+                '2' => 'Fill',
+                '3' => 'Underline',
+                '4' => 'Border',
+                '5' => 'Dark Text'
             ),
             'default'  => '1',
         ),
@@ -627,7 +630,7 @@ Redux::setSection($opt_name, array(
 ));
 
 Redux::setSection($opt_name, array(
-    'title' => esc_html__('Portfolio', 'new'),
+    'title' => esc_html__('Blog', 'new'),
     'icon' => 'fas fa-project-diagram',
     'fields' => array(
         array(
@@ -696,5 +699,72 @@ Redux::setSection($opt_name, array(
             'validate' => 'numeric',
         ),
         
+    )
+));
+
+Redux::setSection( $opt_name, array(
+    'title'     => esc_html__('Eventos', 'new'),
+    'icon'      => 'fa fa-paint-brush',
+    'fields'    => array(
+        array(
+            'id'    => 'new_info_color_event',
+            'type'  => 'info',
+            'title' => esc_html__('Color Fondo Fechas', 'new'),
+            'desc'  => esc_html__('Usa estos colores para mejorar el aspecto de tu evento o darse la apariencia que tu deseas.', 'new'),
+        ),
+        array(
+            'id'            => 'new_color_event',
+            'type'          => 'color',
+            'title'         => esc_html__('Color del fondo', 'new'),
+            'subtitle'      => esc_html__('Define el color que va a destacar en tu evento', 'new'),
+            'transparent'   => false,
+            'output'        => array(
+                'background-color'  => '.section-blog .new-blog-classic .entry-meta, .card-header'
+            ),
+            'default'       => '#7b8aa9'
+        ),
+        array(
+            'id'   => 'new_info__bg_color_text',
+            'type' => 'info',
+            'title'    => esc_html__('Color Texto Fechas', 'new'),
+        ),
+        array(
+            'id'       => 'event_text_color',
+            'type'     => 'color',
+            'title'    => esc_html__('Color del texto', 'new'),
+            'subtitle' => esc_html__('Escoge el color del texto de tus fechas.', 'new'),
+            'output'      => array(
+                'color' => '.section-blog .new-blog-classic .entry-meta, .card-header button.btn-link',
+            ),
+
+            'default'  => '#ffffff',
+        ),
+        array(
+            'id'   => 'new_info__bg_color_externo',
+            'type' => 'info',
+            'title'    => esc_html__('Color Fondo Eventos Externos', 'new'),
+        ),
+        array(
+            'id'       => 'event_externo_color',
+            'type'     => 'color',
+            'title'    => esc_html__('Color de Fondo Externo', 'new'),
+            'subtitle' => esc_html__('Escoge el color de fondo para eventos externos.', 'new'),
+            'output'      => array(
+                'background-color' => '.section-blog .new-blog-classic.externo',
+            ),
+
+            'default'  => '#ffffff',
+        ),
+        array(
+            'id'       => 'event_text_color_externo',
+            'type'     => 'color',
+            'title'    => esc_html__('Color del texto', 'new'),
+            'subtitle' => esc_html__('Escoge el color del texto para los eventos externos.', 'new'),
+            'output'      => array(
+                'color' => '.new-blog-classic.externo .content-entry, .new-blog-classic.externo .content-entry h2 a',
+            ),
+
+            'default'  => '#ffffff',
+        ),
     )
 ));

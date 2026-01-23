@@ -61,7 +61,6 @@ class AdminPanel {
             'comments-slider' => 'Carousel de Comentarios',
             'content-box' => 'Cajas de Contenido',
             'carousel-horizontal' => 'Galeria Horizontal',
-            'products-list' => 'Lista de Productos',
         ];
     }
 

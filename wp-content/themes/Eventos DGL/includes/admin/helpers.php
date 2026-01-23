@@ -242,7 +242,7 @@ if(!function_exists('vivero_get_page_title')) {
         $title_services = $new_options['text_title_services'];
         $title_project = $new_options['text_title_project'];
         $title_blog = $new_options['text_title_blog'];
-        $p_blog = $new_options['vivero_text_p_blog'];
+        $p_blog = $new_options['new_text_p_blog'];
         if(is_home() && is_front_page()) {
             //echo bloginfo ( 'description' );
         } else if( is_home() && !is_front_page()) {
@@ -278,7 +278,7 @@ if(!function_exists('vivero_get_page_title')) {
             echo esc_html__('Articulos de', 'new') . ' ' . get_the_author();
         } else if(is_post_type_archive('portfolio')) {
             echo esc_html__($title_project, 'new');
-        }else if(is_post_type_archive('learn')) {
+        }else if(is_post_type_archive('eventos')) {
             echo esc_html__($title_services, 'new');
         }else {
             echo get_the_title();

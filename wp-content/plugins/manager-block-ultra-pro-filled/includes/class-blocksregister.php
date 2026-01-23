@@ -28,7 +28,6 @@ class BlocksRegister {
             'comments-slider',
             'content-box',
             'carousel-horizontal',
-            'products-list',
         ];
 
         // Obtener los bloques habilitados desde la base de datos

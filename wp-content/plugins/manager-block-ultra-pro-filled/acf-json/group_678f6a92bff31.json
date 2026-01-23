@@ -37,7 +37,10 @@
             "default_value": "",
             "enable_opacity": 1,
             "return_format": "string",
-            "allow_in_bindings": 0
+            "allow_in_bindings": 0,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_68d2d7534c9fe",
@@ -116,7 +119,10 @@
             "default_value": "#FFFFFF",
             "enable_opacity": 0,
             "return_format": "string",
-            "allow_in_bindings": 0
+            "allow_in_bindings": 0,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_6797bd5793073",
@@ -174,7 +180,10 @@
             "default_value": "",
             "enable_opacity": 0,
             "return_format": "string",
-            "allow_in_bindings": 0
+            "allow_in_bindings": 0,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         }
     ],
     "location": [
@@ -189,7 +198,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "projects"
+                "value": "post"
             }
         ]
     ],
@@ -202,5 +211,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1760430402
+    "display_title": "",
+    "modified": 1769161225
 }
