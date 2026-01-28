@@ -170,6 +170,10 @@ hr {
     color: #000;
     text-decoration: none
 }
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
 
 .section-blog {
     padding: 0 0 40px 0
@@ -180,6 +184,26 @@ hr {
     grid-template-columns: repeat(1,1fr);
     gap: 35px
 }
+
+.shc-event{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+@media (min-width: 768px) and (max-width:1269px) {
+    .shc-event {
+        grid-template-columns:repeat(2,1fr)
+    }
+}
+
+@media (min-width: 1270px) {
+    .shc-event{
+        grid-template-columns:repeat(3,1fr)
+    }
+}
+
 
 @media (min-width: 768px) and (max-width:1269px) {
     .section-blog .new-classic {
@@ -194,7 +218,7 @@ hr {
 }
 
 .section-blog .new-blog-classic {
-    padding: 0 0 20px 0;
+    padding: 0 0 0 0;
     background: #fbfafa;
     border: 1px solid var(--color-text);
     box-shadow: 0 4px 12px rgba(0,0,0,.2)
@@ -209,7 +233,7 @@ hr {
 }
 
 .section-blog .new-blog-classic h2 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.3;
     margin: 0;
@@ -217,7 +241,7 @@ hr {
 }
 
 .section-blog .new-blog-classic p {
-    font-size: .8rem;
+    font-size: .9rem;
     font-weight: 200
 }
 
@@ -325,6 +349,9 @@ hr {
     font-weight: 900;
     line-height: 1
 }
+.card-body .f-dia-num{
+    font-size: 1.9rem;
+}
 
 .f-mes-anio {
     display: flex;
@@ -379,7 +406,7 @@ hr {
 .fechas-single .la-fecha p {
     padding: 0;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     color: #000
 }
 
@@ -444,6 +471,82 @@ hr {
 .programas p {
     font-size: 12px;
     padding: 0
+}
+/** Buscador de eventos */
+/* El botón disparador */
+.btn-grid-selector {
+    font-family: var(--font-main), sans-serif;
+    background-color: #dd3333;
+    color: white !important;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    font-weight: bold;
+    padding: 0 20px;
+    border-radius: 4px;
+}
+
+/* Contenedor del menú */
+.dropdown-grid-menu {
+    font-family: var(--font-main), sans-serif;
+    background-color: #ffffff !important;
+    border: 1px solid #dd3333;
+    width: 100%;
+    padding: 10px !important;
+    margin-top: 5px !important;
+    min-width: 100%;
+    font-weight: 200;
+}
+
+/* Cuando el menú está abierto (clase .show de Bootstrap 4) */
+.dropdown-grid-menu.show {
+    display: grid !important; /* Activamos el grid */
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
+    gap: 2px;
+}
+
+/* Los botones de categoría */
+.dropdown-grid-item {
+    background-color: white;
+    color: #dd3333;
+    border: 1px solid #dd3333;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none !important;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.2s;
+    border-radius: 3px;
+    display: block;
+}
+
+.dropdown-grid-item:hover {
+    background-color: #dd3333;
+    color: #ffffff;
+}
+.dropdown-grid-item:hover a {
+    color: #fff !important;
+}
+
+/* "Todas las categorías" ocupa las 2 columnas */
+.item-full-width {
+    grid-column: span 2;
+    background-color: #333;
+    color: #ffffff !important;
+}
+.dropdown-grid-item.item-full-width {
+    border-color: #333;
+}
+.item-full-width:hover{
+
+}
+
+/* Corregimos flecha de Bootstrap 4 */
+.dropdown-toggle::after {
+    margin-left: 10px;
 }
 
 .accordion {

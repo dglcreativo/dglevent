@@ -12,7 +12,7 @@ if (is_single()) : ?>
     <?php
     if (!$esPropio): ?>
         <h2 class="entry-title"><a href="<?php echo esc_url($urlEventoExterno); ?>"
-                                   title="<?php the_title_attribute(); ?>"><?php echo esc_html($titulo_evento) ?></a>
+                                   title="<?php the_title_attribute(); ?>" target="_blank"><?php echo esc_html($titulo_evento) ?></a>
         </h2>
     <?php else:
         if ($esPropio):

@@ -66,6 +66,21 @@ if(!function_exists('vivero_get_header_theme')):
     }
 endif;
 
+if(!function_exists('new_get_calendar_event')):
+
+    function new_get_calendar_event(){
+        global $new_options;
+        if(empty($new_options)){
+            $new_options = new_default_option_theme();
+        }
+        if(isset($new_options['new_calendar_event'])){
+            return get_template_part('templates/blog/content', $new_options['new_calendar_event']);
+        } else{
+            return get_template_part('templates/blog/content', 'calendarss');
+        }
+    }
+endif;
+
 if(!function_exists('vivero_get_header_theme_learn')):
 
     function vivero_get_header_theme_learn(){
@@ -331,4 +346,123 @@ if(!function_exists('vivero_get_pagination')) {
         endif;
     }
 }
+
+/**
+ * Redes Sociales
+ */
+function social_links(){
+    global $new_options;
+
+    if( !empty($new_options['facebook'])) { ?>
+        <a href="<?php echo $new_options['facebook'] ?>" target="&quot;_blank&quot;"  title="facebook"><i class="fab fa-facebook"></i></a>
+    <?php } ?>
+    <?php if( !empty($new_options['twitter'])) { ?>
+        <a href="<?php echo $new_options['twitter'] ?>" target="&quot;_blank&quot;" title="twitter"><i class="fab fa-twitter"></i></a>
+    <?php } ?>
+    <?php if( !empty($new_options['linkedin'])) { ?>
+        <a href="<?php echo $new_options['linkedin'] ?>" target="&quot;_blank&quot;" title="linkedin"><i class="fab fa-linkedin"></i></a>
+    <?php } ?>
+    <?php if( !empty($new_options['instagram'])) { ?>
+        <a href="<?php echo $new_options['instagram'] ?>" target="&quot;_blank&quot;" title="instagram"><i class="fab fa-instagram"></i></a>
+    <?php } ?>
+    <?php if( !empty($new_options['github'])) { ?>
+        <a href="<?php echo $new_options['github'] ?>" target="&quot;_blank&quot;" title="github"><i class="fab fa-github"></i></a>
+    <?php }
+}
+
+function shortcode_ultimos_eventos($atts) {
+    // Configuramos opciones del shortcode
+    $args_atts = shortcode_atts(array(
+        'cantidad' => 3,
+    ), $atts);
+
+    // Usamos la función de WordPress para obtener la fecha local correcta
+    $hoy_num = (int)current_time('Ymd');
+
+    // 1. Consulta inicial
+    $args = array(
+        'post_type'      => 'eventos',
+        'posts_per_page' => -1,
+        'post_status'    => 'publish',
+    );
+
+    $query = new WP_Query($args);
+    $eventos_proximos = array();
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            $current_id = get_the_ID();
+
+            // Traemos el campo sin formatear para evitar desfases de zona horaria en la lógica
+            $fechas = get_field('fecha_evento');
+            $fecha_referencia = 0;
+
+            if ($fechas && is_array($fechas)) {
+                foreach ($fechas as $f) {
+                    if (empty($f['fecha'])) continue;
+
+                    // Limpieza por si acaso hay caracteres no numéricos
+                    $inicio = (int)preg_replace('/[^0-9]/', '', $f['fecha']);
+
+                    if (!empty($f['fechas_consecutivas']) && !empty($f['segunda_fecha'])) {
+                        $fin = (int)preg_replace('/[^0-9]/', '', $f['segunda_fecha']);
+                    } else {
+                        $fin = $inicio;
+                    }
+
+                    // Si el evento termina hoy o en el futuro
+                    if ($fin >= $hoy_num) {
+                        $fecha_referencia = $inicio;
+                        break;
+                    }
+                }
+            }
+
+            if ($fecha_referencia >= $hoy_num) {
+                $eventos_proximos[] = array(
+                    'ID'    => $current_id,
+                    'fecha' => $fecha_referencia
+                );
+            }
+        }
+        wp_reset_postdata();
+    }
+
+    // 2. Ordenar por fecha más cercana
+    usort($eventos_proximos, function($a, $b) {
+        return $a['fecha'] - $b['fecha'];
+    });
+
+    // 3. Limitar cantidad
+    $eventos_proximos = array_slice($eventos_proximos, 0, (int)$args_atts['cantidad']);
+
+    // 4. Generar el HTML
+    ob_start();
+    if (!empty($eventos_proximos)) {
+        echo '<div class="section-blog">';
+        echo '<div class="container">';
+        echo '<div class="shc-event">';
+
+        global $post; // Declaramos la global para asegurar compatibilidad
+        foreach ($eventos_proximos as $item) {
+            $post = get_post($item['ID']);
+            setup_postdata($post);
+
+            echo '<div class="new-classic" style="grid-template-columns: none">';
+            // Aquí es donde se pinta la fecha.
+            get_template_part('templates/blog/content-blog', 'learn');
+            echo '</div>';
+        }
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        wp_reset_postdata();
+    } else {
+        echo '<p>No hay eventos próximos.</p>';
+    }
+
+    return ob_get_clean();
+}
+add_shortcode('ultimos_eventos', 'shortcode_ultimos_eventos');
 

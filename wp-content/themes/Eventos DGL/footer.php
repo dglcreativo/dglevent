@@ -56,9 +56,10 @@ if ($new_options['footer_text_colors'] == 'text-dark') {
                 </div>
                 <div class="col-12 col-md-5">
                     <div class="icons">
-                        <a href="https://linkedin.com/in/luis-miguel-moreno-tapia-b88b6965" target="_blank"> <i class="fab fa-linkedin"></i></a>
+                        <?php social_links(); ?>
+                        <!--<a href="https://linkedin.com/in/luis-miguel-moreno-tapia-b88b6965" target="_blank"> <i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/dglcreativo" target="_blank"> <i class="fab fa-github"></i></a>
-                        <a href="mailto:dglcreativo@hotmail.es" target="_blank"> <i class="fa fa-envelope"></i></a>
+                        <a href="mailto:dglcreativo@hotmail.es" target="_blank"> <i class="fa fa-envelope"></i></a>-->
                     </div>
                 </div>
             </div>

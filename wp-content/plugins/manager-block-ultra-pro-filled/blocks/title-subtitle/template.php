@@ -47,7 +47,9 @@ if($banner_title == ''){
         <div class="row">
             <div class="col-12">
                 <h2 class="ts__title"><?php echo esc_html($banner_title) ?></h2>
+                <?php if($banner_description != ''): ?>
                 <p class="ts__d"><?php echo esc_html($banner_description) ?></p>
+                <?php endif; ?>
             </div>
         </div>
     </div>

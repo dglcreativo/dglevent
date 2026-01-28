@@ -8,7 +8,7 @@ get_header('eventos');
 ?>
 
 <div class="site-content section-page" id="content">
-    <div class="container-fluid">
+    <div class="container">
         <main id="main" class="site-main section-blog">
             <div class="row">
                 <div id="primary" class="col-md-12">

@@ -1,6 +1,6 @@
 <?php
 
-function vivero_scripts_styles(){
+function new_scripts_styles(){
     global $new_options;
     $new_options_custom_css = "";
     //Fuentes de google fonts
@@ -22,6 +22,22 @@ function vivero_scripts_styles(){
 
     wp_enqueue_script('ion-icon-ems', 'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js', 'jquery', '', true);
     wp_enqueue_script('ion-icon', 'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', 'jquery', '', true);
+    // 1. Registramos y cargamos el CSS de Swiper
+    wp_enqueue_style(
+        'swiper-css',
+        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
+        array(),
+        '11.0.0'
+    );
+
+    // 2. Registramos y cargamos el JS de Swiper (indicando que cargue en el footer para mejor rendimiento)
+    wp_enqueue_script(
+        'swiper-js',
+        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+        array(),
+        '11.0.0',
+        true
+    );
     //Custom Script
     wp_enqueue_script('scripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), '1.0.0', true);
 
@@ -54,6 +70,23 @@ function vivero_scripts_styles(){
         if(!empty($new_options['nav_item_padding'])) {
             $new_options_custom_css .= ".nav-menu > .menu-item > a{padding-left: {$new_options['nav_item_padding']['width']}px; padding-right: {$new_options['nav_item_padding']['width']}px;}";
         }
+        // Social link
+        if ( !empty($new_options['social_lineheight']) ) {
+            $new_options_custom_css .= "
+                footer .icons a {
+                    line-height: {$new_options['social_lineheight']}px;
+                    
+                }";
+        }
+        if ( !empty($new_options['social_fontsize']) ) {
+            $new_options_custom_css .= "
+                footer .icons a{
+                    font-size: {$new_options['social_fontsize']}px;
+                    
+                }";
+        }
+
+        /** Buscador de eventos */
         
     }
 
@@ -78,7 +111,7 @@ function vivero_scripts_styles(){
     }
     wp_add_inline_style('new-style', $new_options_custom_css);
 }
-add_action('wp_enqueue_scripts', 'vivero_scripts_styles');
+add_action('wp_enqueue_scripts', 'new_scripts_styles');
 
 add_action( 'admin_enqueue_scripts', function() {
     wp_enqueue_style( 'new-admin-dashboard', get_template_directory_uri().'/css/admin-dashboard.css' );

@@ -766,5 +766,134 @@ Redux::setSection( $opt_name, array(
 
             'default'  => '#ffffff',
         ),
+        array(
+            'id'   => 'new_info_calendar',
+            'type' => 'info',
+            'title'    => esc_html__('Configuración calendario', 'new'),
+        ),
+        array(
+            'id'       => 'new_calendar_event',
+            'type'     => 'select',
+            'title'    => esc_html__('Elija el diseño del calendario', 'new'),
+            'subtitle' => esc_html__('Escoge entre cabecera por meses o por arrastre.', 'new'),
+            'compiler' => true,
+            'options'  => array(
+                'calendarss'    => 'Por Meses',
+                'calendarinfinite' => 'Arrastrable',
+
+            ),
+            'default' => 'calendarss'
+        ),
+        array(
+            'id'   => 'new_info_calendar_search',
+            'type' => 'info',
+            'title'    => esc_html__('Buscador e eventos', 'new'),
+        ),
+        array(
+            'id' => 'search_event_onoff',
+            'type' => 'switch',
+            'title' => esc_html__('Ver el buscador', 'new'),
+            'subtitle'      => esc_html__('Quieres ver el buscador de eventos para visualizar por categorias.', 'new'),
+            'default' => '1', // 1 = on | 0 = off
+            'on' => 'Si',
+            'off' => 'No',
+            'compiler' => true,
+        ),
+        array(
+            'id'            => 'color_btn_selector',
+            'type'          => 'color',
+            'title'         => esc_html__('Color Principal', 'new'),
+            'subtitle'      => esc_html__('Define el color que va a destacar.', 'new'),
+            'transparent'   => false,
+            'output'        => array(
+                'background-color'  => '.btn-grid-selector, .dropdown-grid-item:hover',
+                'color'             => '.dropdown-grid-item',
+                'border-color'      => '.dropdown-grid-menu, .dropdown-grid-item, .dropdown-grid-item.item-full-width:hover',
+            ),
+            'default'       => '#7b8aa9'
+        ),
     )
+));
+
+Redux::setSection( $opt_name, array(
+    'title'     => esc_html__( 'Social links', 'new' ),
+    'id'        => 'opt_social_links',
+    'icon'      => 'dashicons dashicons-share',
+    'fields'    => array(
+
+        array(
+            'id'    => 'facebook',
+            'type'  => 'text',
+            'title' => esc_html__( 'Facebook', 'new' ),
+            'default'	 => '#'
+        ),
+
+        array(
+            'id'    => 'twitter',
+            'type'  => 'text',
+            'title' => esc_html__( 'Twitter', 'new' ),
+            'default'	  => '#'
+        ),
+
+        array(
+            'id'    => 'instagram',
+            'type'  => 'text',
+            'title' => esc_html__( 'Instagram', 'new' ),
+        ),
+
+        array(
+            'id'    => 'linkedin',
+            'type'  => 'text',
+            'title' => esc_html__( 'LinkedIn', 'new' ),
+            'default'	  => '#'
+        ),
+
+        array(
+            'id'    => 'github',
+            'type'  => 'text',
+            'title' => esc_html__( 'GitHub', 'new' ),
+        ),
+
+        array(
+            'title'     => esc_html__( 'Color Icono Redes Sociales', 'new' ),
+            'id'        => 'icon_social_color',
+            'type'      => 'color',
+            'subtitle'  => esc_html__( 'Color del icono de las redes sociales.', 'new' ),
+            'mode'      => 'background',
+            'output'    => array(
+                'color'    => ".icons i"
+            ),
+        ),
+        array(
+            'title'     => esc_html__( 'Hover Icono Redes Sociales', 'new' ),
+            'id'        => 'icon_social_color_hover',
+            'type'      => 'color',
+            'subtitle'  => esc_html__( 'Hover del icono de las redes sociales.', 'new' ),
+            'mode'      => 'background',
+            'output'    => array(
+                'color'    => ".icons i:hover"
+            ),
+        ),
+
+        array(
+            'id'       => 'social_lineheight',
+            'type'     => 'text',
+            'title'    => __('Line Height Icono Redes Sociales', 'new'),
+            'desc'     => __('Solo pondremos el numero sin los px. Poner el mismo valor que en Dimensiones.', 'new'),
+            'validate' => array( 'numeric' ),
+            'msg'      => __('Solo pueden ser numeros'),
+            'default'  => '50'
+        ),
+
+        array(
+            'id'       => 'social_fontsize',
+            'type'     => 'text',
+            'title'    => __('Tamaño fuente Icono Redes Sociales', 'new'),
+            'desc'     => __('Solo pondremos el numero sin los px.', 'new'),
+            'validate' => array( 'numeric' ),
+            'msg'      => __('Solo pueden ser numeros'),
+            'default'  => '22'
+        )
+
+    ),
 ));
